@@ -61,8 +61,7 @@ public class Trick {
   }
 
   private void sort() {
-    class CardColorComparator implements Comparator<Card> {
-
+    Comparator<Card> comparator = new Comparator<Card>() {
       @Override
       public int compare(Card card1, Card card2) {
         int comparison = card1.getSuit().getColor().compareTo(card2.getSuit().getColor());
@@ -74,9 +73,7 @@ public class Trick {
         }
         return comparison;
       }
-
-    }
-    Comparator<Card> comparator = new CardColorComparator();
+    };
     redPile.sort(comparator);
     blackPile.sort(comparator);
   }
