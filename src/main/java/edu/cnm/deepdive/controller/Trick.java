@@ -29,7 +29,7 @@ public class Trick {
     trick.display();
   }
 
-  private void split(Deck deck) {
+  private void split(Deck deck) { //sorting deck
     boolean routing = false;
     Pile destination = null;
     for (Card card : deck) {
